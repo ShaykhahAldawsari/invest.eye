@@ -25,7 +25,7 @@ def prepare_tfidf(df):
     return vectorizer, tfidf_matrix
 
 # search descriptions based on query
-def search_descriptions(query, df, vectorizer, tfidf_matrix, top_n=5):
+def search_descriptions(query, df, vectorizer, tfidf_matrix, top_n=3):
     query_vec = vectorizer.transform([query.lower()])
     similarity_scores = np.dot(query_vec, tfidf_matrix.T).toarray()[0]
     top_indices = np.argsort(similarity_scores)[::-1][:top_n]
