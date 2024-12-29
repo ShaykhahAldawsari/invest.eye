@@ -33,12 +33,12 @@ def search_descriptions(query, df, vectorizer, tfidf_matrix, top_n=5):
     results['similarity_score'] = similarity_scores[top_indices] * 100  # convert to percentage
     return results
 
-st.image("invest.eye.png")
+st.image("deployement\invest.eye.png")
 
 st.title("Invest.eye: your eye into a smart investment")
 st.write("welcome to invest.eye! this tool helps you explore and evaluate public investment fund (pif) companies and their plans. use it to gain insights and make informed investment decisions.")
 
-file_path = 'pif_companies_filtered.csv'
+file_path = 'deployement\pif_companies_filtered.csv'
 
 df = load_data(file_path)
 
